@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="timeZoneAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SetTimeZoneGUIController">
+   <children>
+      <GridPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="482.0" minWidth="10.0" prefWidth="155.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.0" minWidth="10.0" prefWidth="311.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.0" minWidth="10.0" prefWidth="168.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <SplitMenuButton fx:id="MenuButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleMenuButtonPress" text="Time Zones" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <items>
+                <MenuItem fx:id="GMT" mnemonicParsing="false" onAction="#handleGMTSelect" text="Greenwich Mean Time - GMT" />
+                <MenuItem fx:id="UCT" mnemonicParsing="false" onAction="#handleUCTSelect" text="Universal Coordinated Time - GMT" />
+                <MenuItem fx:id="ECT" mnemonicParsing="false" onAction="#handleECTSelect" text="European Central Time - GMT+1:00" />
+                <MenuItem fx:id="EET" mnemonicParsing="false" onAction="#handleEETSelect" text="Eastern European Time - GMT+2:00" />
+                <MenuItem fx:id="EST" mnemonicParsing="false" onAction="#handleESTSelect" text="Egypt Standard Time - GMT+2:00" />
+                <MenuItem fx:id="EAT" mnemonicParsing="false" onAction="#handleEATSelect" text="Eastern African Time - GMT+3:00" />
+                <MenuItem fx:id="MET" mnemonicParsing="false" onAction="#handleMETSelect" text="Middle East Time - GMT+3:30" />
+                <MenuItem fx:id="NET" mnemonicParsing="false" onAction="#handleNETSelect" text="Near East Time - GMT+4:00" />
+                <MenuItem fx:id="PLT" mnemonicParsing="false" onAction="#handlePLTSelect" text="Pakistan Lahore Time - GMT+5:00" />
+                <MenuItem fx:id="IST" mnemonicParsing="false" onAction="#handleISTSelect" text="India Standard Time - GMT+5:30" />
+                <MenuItem fx:id="BST" mnemonicParsing="false" onAction="#handleBSTSelect" text="Bangladesh Standard Time - GMT+6:00" />
+                <MenuItem fx:id="VST" mnemonicParsing="false" onAction="#handleVSTSelect" text="Vietnam Standard Time - GMT+7:00" />
+                <MenuItem fx:id="CTT" mnemonicParsing="false" onAction="#handleCTTSelect" text="China Taiwan Time - GMT+8:00" />
+                <MenuItem fx:id="JST" mnemonicParsing="false" onAction="#handleJSTSelect" text="Japan Standard Time - GMT+9:00" />
+                <MenuItem fx:id="ACT" mnemonicParsing="false" onAction="#handleACTSelect" text="Australia Central Time - GMT+9:30" />
+                <MenuItem fx:id="AET" mnemonicParsing="false" onAction="#handleAETSelect" text="Australia Eastern Time - GMT+10:00" />
+                <MenuItem fx:id="SST" mnemonicParsing="false" onAction="#handleSSTSelect" text="Solomon Standard Time - GMT+11:00" />
+                <MenuItem fx:id="NZST" mnemonicParsing="false" onAction="#handleNZSTSelect" text="New Zealand Standard Time - GMT+12:00" />
+                <MenuItem fx:id="MIT" mnemonicParsing="false" onAction="#handleMITSelect" text="Midway Islands Time - GMT-11:00" />
+                <MenuItem fx:id="HST" mnemonicParsing="false" onAction="#handleHSTSelect" text="Hawaii Standard Time - GMT-10:00" />
+                <MenuItem fx:id="AST" mnemonicParsing="false" onAction="#handleASTSelect" text="Alaska Standard Time - GMT-9:00" />
+                <MenuItem fx:id="PST" mnemonicParsing="false" onAction="#handlePSTSelect" text="Pacific Standard Time - GMT-8:00" />
+                <MenuItem fx:id="PHST" mnemonicParsing="false" onAction="#handlePHSTSelect" text="Phoenix Standard Time - GMT-7:00" />
+                <MenuItem fx:id="MST" mnemonicParsing="false" onAction="#handleMSTSelect" text="Mountain Standard Time - GMT-7:00" />
+                <MenuItem fx:id="CST" mnemonicParsing="false" onAction="#handleCSTSelect" text="Central Standard Time - GMT-6:00" />
+                <MenuItem fx:id="EAST" mnemonicParsing="false" onAction="#handleEASTSelect" text="Eastern Standard Time - GMT-5:00" />
+                <MenuItem fx:id="IEST" mnemonicParsing="false" onAction="#handleIESTSelect" text="Indiana Eastern Standard Time - GMT-5:00" />
+                <MenuItem fx:id="PRVI" mnemonicParsing="false" onAction="#handlePRVISelect" text="Puerto Rico and US Virgin Islands Time - GMT-4:00" />
+                <MenuItem fx:id="CNT" mnemonicParsing="false" onAction="#handleCNTSelect" text="Canada Newfoundland Time - GMT-3:30" />
+                <MenuItem fx:id="ARST" mnemonicParsing="false" onAction="#handleARSTSelect" text="Argentina Standard Time - GMT-3:00" />
+                <MenuItem fx:id="BET" mnemonicParsing="false" onAction="#handleBETSelect" text="Brazil Eastern Time - GMT-3:00" />
+                <MenuItem fx:id="CAT" mnemonicParsing="false" onAction="#handleCATSelect" text="Central African Time - GMT-1:00" />
+              </items>
+            </SplitMenuButton>
+            <Label text="Select Time Zone" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Text fx:id="selectTimeZoneText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <Label fx:id="setLabel" prefHeight="105.0" prefWidth="299.0" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
